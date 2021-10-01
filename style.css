@@ -13,13 +13,28 @@
     background-repeat: no-repeat;
     background-size: cover;
 }
+.hero.bilbao::before{
+    content:"";
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    background-color: rgba(246, 0, 27, 0.4);
+    z-index: 0;
+}
+.hero.bizkaia::before{
+    content:"";
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    background-color: rgba(16, 112, 32, 0.3);
+    z-index: 0;
+}
 .hero.bilbao{
     background-image: url(bilbao.jpg);
 }
 .hero.bizkaia{
     background-image: url(bizkaia.jpg);
 }
-
 .contenedor {
     max-width: 1300px;
     height: 100vh;
@@ -27,13 +42,15 @@
     padding: 0 50px;
     /*border: 1px solid black;*/
 }
-
 header {
     height: 20vh;
     width: 100%;
     display: flex;
-    align-items: center;
+    align-items: center;  
     /*border: 1px solid black;*/
+}
+header a{
+    z-index: 2;
 }
 
 .logo {
@@ -53,6 +70,7 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    z-index: 1;
 }
 .columna:nth-child(1){
     width: 35%;
@@ -64,7 +82,7 @@ header {
     width: 30%;
 }
 
-.columna h1, .columna h2, .columna h3{
+.columna h1, .columna h2, .columna p{
     font-family: 'Playfair Display', serif;
     font-weight: 400;
     line-height: 1.1;
@@ -73,15 +91,24 @@ header {
     font-size: 55px;
     margin-bottom: .5em;
 }
+.columna.thank h1{
+    font-size: 45px;
+    margin-bottom: .5em;
+}
+
 .columna h2{
     font-size: 45px;
     margin-bottom: 1em;
 }
-.columna h3{
+.columna p{
     font-family: 'Montserrat', sans-serif;
     font-size: 18px;
     margin-bottom: 20px;
     line-height: 1.4;
+}
+.columna.thank p{
+    font-size: 18px;
+    margin-bottom: 0px;
 }
 
 .columna img{
@@ -131,4 +158,70 @@ header {
     border: none;
     border-radius: 50px;
     color: black
+}
+.redes{
+    margin-top:30px;
+}
+.columna.thank .redes p{
+    font-size: 16px;
+    margin-bottom: 5px;
+    line-height: 1.4;
+}
+.redes img{
+    max-width: 30px;
+    margin:10px 10px 0 0;
+}
+@media only screen and (max-width: 1080px) {
+    header {
+        padding: 0 20px;
+    }
+
+    .hero {
+        height: 100%;
+    }
+    .hero.bilbao::before{
+        height: 100%;
+    }
+    .hero.bizkaia::before{
+        height: 100%;
+    }
+    .hero-contenido {
+        height: 70vh;
+        display: flex;
+        flex-direction: column;
+        /*border: 1px solid black;*/
+    }
+    .contenedor{
+        padding: 0;
+        height: 100%;
+    }
+    .columna:nth-child(1){
+        width: 100%;
+        padding: 0 20px;
+    }
+    .columna:nth-child(2){
+        width: 100%;
+        padding: 20px;
+    }
+    .columna:nth-child(3){
+        width: 100%;
+    }
+    .columna h1{
+        font-size: 40px;
+        margin-bottom: .5em;
+    }
+    .columna.thank h1{
+        font-size: 35px;
+        margin-bottom: .5em;
+    }
+    .columna h2{
+        font-size: 35px;
+        margin-bottom: 1em;
+    }
+    .formulario h2 {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 20px;
+        line-height: 1.5;
+    }
+
 }
