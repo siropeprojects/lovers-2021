@@ -7,34 +7,19 @@
 .hero {
     height: 100vh;
     width: 100%;
-    background-color: #000000af;
-    background-blend-mode: multiply;
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
 }
-.hero.bilbao::before{
-    content:"";
-    height: 100vh;
-    width: 100%;
-    position: absolute;
-    background-color: rgba(246, 0, 27, 0.4);
-    z-index: 0;
+
+.hero.bilbao {
+    background-image: linear-gradient( rgba(139, 8, 8, 0.8), rgba(139, 8, 8, 0.8)), url(bilbao.jpg);
 }
-.hero.bizkaia::before{
-    content:"";
-    height: 100vh;
-    width: 100%;
-    position: absolute;
-    background-color: rgba(16, 112, 32, 0.3);
-    z-index: 0;
+
+.hero.bizkaia {
+    background-image: linear-gradient( rgba(10, 76, 11, 0.75), rgba(10, 76, 11, 0.75)), url(bizkaia.jpg);
 }
-.hero.bilbao{
-    background-image: url(bilbao.jpg);
-}
-.hero.bizkaia{
-    background-image: url(bizkaia.jpg);
-}
+
 .contenedor {
     max-width: 1300px;
     height: 100vh;
@@ -42,14 +27,16 @@
     padding: 0 50px;
     /*border: 1px solid black;*/
 }
+
 header {
     height: 20vh;
     width: 100%;
     display: flex;
-    align-items: center;  
+    align-items: center;
     /*border: 1px solid black;*/
 }
-header a{
+
+header a {
     z-index: 2;
 }
 
@@ -65,56 +52,65 @@ header a{
     /*border: 1px solid black;*/
 }
 
-.columna{
+.columna {
     color: white;
     display: flex;
     flex-direction: column;
     justify-content: center;
     z-index: 1;
 }
-.columna:nth-child(1){
+
+.columna:nth-child(1) {
     width: 35%;
 }
-.columna:nth-child(2){
-    width: 30%;
-}
-.columna:nth-child(3){
+
+.columna:nth-child(2) {
     width: 30%;
 }
 
-.columna h1, .columna h2, .columna p{
+.columna:nth-child(3) {
+    width: 30%;
+}
+
+.columna h1,
+.columna h2,
+.columna p {
     font-family: 'Playfair Display', serif;
     font-weight: 400;
     line-height: 1.1;
 }
-.columna h1{
+
+.columna h1 {
     font-size: 55px;
     margin-bottom: .5em;
 }
-.columna.thank h1{
+
+.columna.thank h1 {
     font-size: 45px;
     margin-bottom: .5em;
 }
 
-.columna h2{
+.columna h2 {
     font-size: 45px;
     margin-bottom: 1em;
 }
-.columna p{
+
+.columna p {
     font-family: 'Montserrat', sans-serif;
     font-size: 18px;
     margin-bottom: 20px;
     line-height: 1.4;
 }
-.columna.thank p{
+
+.columna.thank p {
     font-size: 18px;
     margin-bottom: 0px;
 }
 
-.columna img{
+.columna img {
     width: 100%;
-    
 }
+
 .formulario {
     font-family: 'Montserrat', sans-serif;
     background-color: rgba(0, 0, 0, 0.5);
@@ -159,62 +155,59 @@ header a{
     border-radius: 50px;
     color: black
 }
-.redes{
-    margin-top:30px;
+
+.redes {
+    margin-top: 30px;
 }
-.columna.thank .redes p{
+
+.columna.thank .redes p {
     font-size: 16px;
     margin-bottom: 5px;
     line-height: 1.4;
 }
-.redes img{
+
+.redes img {
     max-width: 30px;
-    margin:10px 10px 0 0;
+    margin: 10px 10px 0 0;
 }
+
 @media only screen and (max-width: 1080px) {
     header {
         padding: 0 20px;
     }
-
     .hero {
         height: 100%;
     }
-    .hero.bilbao::before{
-        height: 100%;
-    }
-    .hero.bizkaia::before{
-        height: 100%;
-    }
     .hero-contenido {
-        height: 70vh;
+        height: auto;
         display: flex;
         flex-direction: column;
         /*border: 1px solid black;*/
     }
-    .contenedor{
+    .contenedor {
         padding: 0;
         height: 100%;
     }
-    .columna:nth-child(1){
+    .columna:nth-child(1) {
         width: 100%;
         padding: 0 20px;
     }
-    .columna:nth-child(2){
+    .columna:nth-child(2) {
         width: 100%;
         padding: 20px;
     }
-    .columna:nth-child(3){
+    .columna:nth-child(3) {
         width: 100%;
     }
-    .columna h1{
+    .columna h1 {
         font-size: 40px;
         margin-bottom: .5em;
     }
-    .columna.thank h1{
+    .columna.thank h1 {
         font-size: 35px;
         margin-bottom: .5em;
     }
-    .columna h2{
+    .columna h2 {
         font-size: 35px;
         margin-bottom: 1em;
     }
@@ -223,5 +216,4 @@ header a{
         font-size: 20px;
         line-height: 1.5;
     }
-
 }
